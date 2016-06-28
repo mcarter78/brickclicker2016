@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="bricks">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link href="css/styles.css" rel="stylesheet">
+  </head>
+  <body ng-controller="BricksCtrl as bricks">
+    <h1>We're Gonna Build A Wall!!</h1>
+    <div class="row" id="sky">
+      <div class="col col-md-4 side">
+        <img ng-src="{{image}}" class="trump">
+      </div>
+      <div class="col col-md-4" id="wall"></div>
+      <div class="col col-md-4 side">
+        <img src="img/white_house.png" id="white-house">
+      </div>
+    </div>
+    <div class="row" id="ground">
+      <div class="col-md-12">
+        <button class="btn btn-lg btn-danger" id="add-brick">Add Brick</button>
+      </div>
+    </div>
+
+    <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+    <script src="js/BricksCtrl.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
