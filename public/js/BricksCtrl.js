@@ -1,6 +1,6 @@
 function BricksCtrl($scope) {
   $scope.data = [
-    {name: "Matt"},
+    {name: "Matthew Carter"},
     {name: "Bob"},
     {name: "Carl"}
   ];
