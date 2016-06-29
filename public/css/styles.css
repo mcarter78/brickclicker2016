@@ -6,19 +6,30 @@ body, html {
   font-family: 'Oswald', sans-serif;
 }
 
-h1 {
+#title {
   color: white;
   position: absolute;
   top: 20px;
-  left: 25%;
+  left: 100px;
   z-index: 999;
   font-weight: bold;
   font-size: 4.5em;
   text-shadow: -2px 2px 2px #294b70;
 }
 
-button:focus,
-button:active {
+#sub-title {
+  color: white;
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  z-index: 999;
+  font-weight: bold;
+  font-size: 3em;
+  text-shadow: -2px 2px 2px #294b70;
+}
+
+#add-brick:focus,
+#add-brick:active {
   outline: 0;
 }
 
@@ -68,6 +79,52 @@ button:active {
   background-image: none;
 }
 
+.smaller-brick {
+  position: relative;
+  width: 17px;
+  height: 8px;
+  margin: 0;
+  padding: 2px;
+  background-color: gray;
+  display: inline-block;
+  float: right;
+  -moz-transform: scaleY(-1);
+  -o-transform: scaleY(-1);
+  -webkit-transform: scaleY(-1);
+  transform: scaleY(-1);
+  filter: FlipV;
+  -ms-filter: "FlipV";
+  background-image: url('../img/brick.jpeg');
+  background-size: cover;
+}
+
+.smaller-brick:hover {
+  background-image: none;
+}
+
+.smallest-brick {
+  position: relative;
+  width: 9px;
+  height: 4px;
+  margin: 0;
+  padding: 2px;
+  background-color: gray;
+  display: inline-block;
+  float: right;
+  -moz-transform: scaleY(-1);
+  -o-transform: scaleY(-1);
+  -webkit-transform: scaleY(-1);
+  transform: scaleY(-1);
+  filter: FlipV;
+  -ms-filter: "FlipV";
+  background-image: url('../img/brick.jpeg');
+  background-size: cover;
+}
+
+.smallest-brick:hover {
+  background-image: none;
+}
+
 .col {
   height: 100%;
 }
@@ -82,6 +139,7 @@ button:active {
   transform: scaleY(-1);
   filter: FlipV;
   -ms-filter: "FlipV";
+  z-index: 4;
 }
 
 #ground {
@@ -97,21 +155,52 @@ button:active {
 #white-house {
   position: absolute;
   bottom: -33px;
-  width: 785px;
+  width: 820px;
   right: -351px;
+  z-index: 3;
 }
 
 .trump {
   position: absolute;
-  bottom: -33px;
+  bottom: -62px;
   left: 86px;
   height: 400px;
+  z-index: 3;
+}
+
+#bush {
+  position: absolute;
+  bottom: -78px;
+  left: -40px;
+  height: 240px;
+  z-index: 2;
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
 }
 
 #add-brick {
   position: absolute;
-  right: 40px;
-  bottom: -42px;
+  right: 880px;
+  bottom: -90px;
+  z-index: 999;
+}
+
+#click-count {
+  color: #fff;
+  position: absolute;
+  right: 600px;
+  bottom: -98px;
+}
+
+#global-count {
+  color: #fff;
+  position: absolute;
+  right: 300px;
+  bottom: -98px;
 }
 
 .form-control {
