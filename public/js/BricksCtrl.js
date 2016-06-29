@@ -29,14 +29,5 @@ function BricksCtrl($scope) {
       $scope.addBrick();
     });
   };
-  $scope.add480 = function() {
-    var btn = document.getElementById('add480');
-    btn.addEventListener('click', function() {
-      for(var i = 0; i < 960; i++) {
-        $scope.addBrick();
-      }
-    });
-  };
   $scope.waitForBrick();
-  $scope.add480();
 }
