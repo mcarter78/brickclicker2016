@@ -4,27 +4,45 @@
     <meta charset="utf-8">
     <title></title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
     <link href="css/styles.css" rel="stylesheet">
   </head>
-  <body ng-controller="BricksCtrl as bricks">
+  <body ng-controller="BricksCtrl" ng-cloak>
     <h1>We're Gonna Build A Wall!!</h1>
     <div class="row" id="sky">
       <div class="col col-md-4 side">
         <img ng-src="{{image}}" class="trump">
       </div>
-      <div class="col col-md-4" id="wall"></div>
+      <div class="col col-md-4" id="wall">
+        <div class="brick" ng-if="data.length < 80" ng-repeat="item in data">
+          <md-tooltip md-direction="top">{{item.name}}</md-tooltip>
+        </div>
+        <div class="sm-brick" ng-if="data.length >= 80" ng-repeat="item in data">
+          <md-tooltip md-direction="top">{{item.name}}</md-tooltip>
+        </div>
+      </div>
       <div class="col col-md-4 side">
         <img src="img/white_house.png" id="white-house">
       </div>
     </div>
     <div class="row" id="ground">
       <div class="col-md-12">
-        <button class="btn btn-lg btn-danger" id="add-brick">Add Brick</button>
+        <form id="brick-form" class="form-group">
+          <input class="form-control" type="text" ng-model="name" placeholder="Your Name" ng-required="true">
+          <button type="submit" class="btn btn-lg btn-danger" id="add-brick">Add Brick</button>
+        </form>
       </div>
     </div>
 
-    <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+    <!-- Angular Material requires Angular.js Libraries -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>
+
+    <!-- Angular Material Library -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script>
     <script src="js/BricksCtrl.js"></script>
     <script src="js/app.js"></script>
   </body>

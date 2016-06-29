@@ -1,2 +1,2 @@
-angular.module('bricks', [])
+angular.module('bricks', ['ngMaterial'])
   .controller('BricksCtrl', BricksCtrl);

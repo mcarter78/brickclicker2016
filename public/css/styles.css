@@ -2,16 +2,19 @@ body, html {
   width: 100%;
   height: 100%;
   margin: 0;
-  overflow-x: hidden;
-  overflow-y: hidden;
+  overflow: hidden;
+  font-family: 'Oswald', sans-serif;
 }
 
 h1 {
   color: white;
   position: absolute;
   top: 20px;
-  left: 34%;
+  left: 25%;
   z-index: 999;
+  font-weight: bold;
+  font-size: 4.5em;
+  text-shadow: -2px 2px 2px #294b70;
 }
 
 button:focus,
@@ -71,6 +74,8 @@ button:active {
 
 #wall {
   padding: 0;
+  bottom: -24px;
+  right: 20px;
   -moz-transform: scaleY(-1);
   -o-transform: scaleY(-1);
   -webkit-transform: scaleY(-1);
@@ -106,134 +111,13 @@ button:active {
 #add-brick {
   position: absolute;
   right: 40px;
-  bottom: -80px;
+  bottom: -42px;
 }
 
-.brick .tooltip {
-  background: #1496bb;
-  bottom: 100%;
-  color: #fff;
-  display: block;
-  left: -25px;
-  margin-bottom: 15px;
-  opacity: 0;
-  padding: 20px;
-  pointer-events: none;
+.form-control {
+  width: 260px;
+  right: 160px;
+  bottom: -42px;
   position: absolute;
-  width: 100%;
-  -webkit-transform: translateY(10px);
-     -moz-transform: translateY(10px);
-      -ms-transform: translateY(10px);
-       -o-transform: translateY(10px);
-          transform: translateY(10px);
-  -webkit-transition: all .25s ease-out;
-     -moz-transition: all .25s ease-out;
-      -ms-transition: all .25s ease-out;
-       -o-transition: all .25s ease-out;
-          transition: all .25s ease-out;
-  -webkit-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
-     -moz-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
-      -ms-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
-       -o-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
-          box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
-}
-
-/* This bridges the gap so you can mouse into the tooltip without it disappearing */
-.brick .tooltip:before {
-  bottom: -20px;
-  content: " ";
-  display: block;
-  height: 20px;
-  left: 0;
-  position: absolute;
-  width: 100%;
-}
-
-/* CSS Triangles */
-.brick .tooltip:after {
-  border-left: solid transparent 10px;
-  border-right: solid transparent 10px;
-  border-top: solid #1496bb 10px;
-  bottom: -10px;
-  content: " ";
-  height: 0;
-  left: 50%;
-  margin-left: -13px;
-  position: absolute;
-  width: 0;
-}
-
-.brick:hover .tooltip {
-  opacity: 1;
-  pointer-events: auto;
-  -webkit-transform: translateY(0px);
-     -moz-transform: translateY(0px);
-      -ms-transform: translateY(0px);
-       -o-transform: translateY(0px);
-          transform: translateY(0px);
-}
-
-.sm-brick .tooltip {
-  background: #1496bb;
-  bottom: 100%;
-  color: #fff;
-  display: block;
-  left: -25px;
-  margin-bottom: 15px;
-  opacity: 0;
-  padding: 20px;
-  pointer-events: none;
-  position: absolute;
-  width: 100%;
-  -webkit-transform: translateY(10px);
-     -moz-transform: translateY(10px);
-      -ms-transform: translateY(10px);
-       -o-transform: translateY(10px);
-          transform: translateY(10px);
-  -webkit-transition: all .25s ease-out;
-     -moz-transition: all .25s ease-out;
-      -ms-transition: all .25s ease-out;
-       -o-transition: all .25s ease-out;
-          transition: all .25s ease-out;
-  -webkit-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
-     -moz-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
-      -ms-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
-       -o-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
-          box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
-}
-
-/* This bridges the gap so you can mouse into the tooltip without it disappearing */
-.sm-brick .tooltip:before {
-  bottom: -20px;
-  content: " ";
-  display: block;
-  height: 20px;
-  left: 0;
-  position: absolute;
-  width: 100%;
-}
-
-/* CSS Triangles  */
-.sm-brick .tooltip:after {
-  border-left: solid transparent 10px;
-  border-right: solid transparent 10px;
-  border-top: solid #1496bb 10px;
-  bottom: -10px;
-  content: " ";
-  height: 0;
-  left: 50%;
-  margin-left: -13px;
-  position: absolute;
-  width: 0;
-}
-
-.sm-brick:hover .tooltip {
-  opacity: 1;
-  z-index: 9999;
-  pointer-events: auto;
-  -webkit-transform: translateY(0px);
-     -moz-transform: translateY(0px);
-      -ms-transform: translateY(0px);
-       -o-transform: translateY(0px);
-          transform: translateY(0px);
+  height: 45px;
 }
