@@ -9,6 +9,7 @@ function BricksCtrl($scope, $firebaseArray, $firebaseAuth) {
     }).catch(function(error) {
       $scope.error = error;
     });
+    $scope.waitForBrick();
   };
   $scope.firebaseData = $firebaseArray(ref);
   $scope.data = [];
@@ -43,5 +44,4 @@ function BricksCtrl($scope, $firebaseArray, $firebaseAuth) {
     });
   };
   $scope.login();
-  $scope.waitForBrick();
 }
