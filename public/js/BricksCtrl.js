@@ -1,8 +1,11 @@
-function BricksCtrl($scope) {
+function BricksCtrl($scope, $firebaseArray) {
+  var ref = new Firebase('https://intense-heat-346.firebaseio.com');
+  $scope.firebaseData = $firebaseArray(ref);
   $scope.data = [];
   $scope.image = '../img/trump1.png';
   $scope.addBrick = function() {
     $scope.data.push('click');
+    $scope.firebaseData.$add({'data':'click'});
     $scope.checkImage($scope.data.length);
   };
   $scope.checkImage = function(num) {

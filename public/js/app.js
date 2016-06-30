@@ -1,2 +1,2 @@
-angular.module('bricks', ['ngMaterial'])
+angular.module('bricks', ['ngMaterial', 'firebase'])
   .controller('BricksCtrl', BricksCtrl);

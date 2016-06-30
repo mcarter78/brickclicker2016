@@ -6,14 +6,14 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">
     <link href='https://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
-    <link href="css/styles.css" rel="stylesheet">
+    <link href="/css/styles.css" rel="stylesheet">
   </head>
   <body ng-controller="BricksCtrl" ng-cloak>
     <h1 id="title">We're Gonna Build A Wall!!</h1>
     <h2 id="sub-title">Click to build it!  Make it a great wall, a beautiful wall!</h2>
     <div class="row" id="sky">
       <div class="col col-md-4 side">
-        <img id="bush" src="img/bush.png">
+        <img id="bush" src="/img/bush.png">
         <img ng-src="{{image}}" class="trump">
       </div>
       <div class="col col-md-4" id="wall">
@@ -27,13 +27,13 @@
         </div>
       </div>
       <div class="col col-md-4 side">
-        <img src="img/white_house.png" id="white-house">
+        <img src="/img/white_house.png" id="white-house">
       </div>
     </div>
     <div class="row" id="ground">
       <div class="col-md-12">
         <h2 id="click-count">Your bricks added: {{data.length}}</h2>
-        <h2 id="global-count">Global bricks added: {{data.length}}</h2>
+        <h2 id="global-count">Global bricks added: {{firebaseData.length}}</h2>
         <button class="btn btn-lg btn-danger" id="add-brick">Add Brick</button>
       </div>
     </div>
@@ -43,10 +43,14 @@
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>
+    <!-- Firebase -->
+    <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+    <!-- AngularFire -->
+    <script src="https://cdn.firebase.com/libs/angularfire/1.2.0/angularfire.min.js"></script>
 
     <!-- Angular Material Library -->
     <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script>
-    <script src="js/BricksCtrl.js"></script>
-    <script src="js/app.js"></script>
+    <script src="/js/BricksCtrl.js"></script>
+    <script src="/js/app.js"></script>
   </body>
 </html>
