@@ -6,7 +6,6 @@ var port = process.env.PORT || 3000
 // Create a server with a host and port
 var server = new Hapi.Server();
 server.connection({
-    host: 'localhost',
     port: port
 });
 
