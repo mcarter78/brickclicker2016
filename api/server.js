@@ -5,8 +5,8 @@ var Hapi = require('hapi');
 // Create a server with a host and port
 var server = new Hapi.Server();
 server.connection({
-    // host: 'localhost',
-    port: 3000
+    host: 'localhost',
+    port: parseInt(process.env.PORT) || 5000
 });
 
 server.register(require('inert'), function() {
