@@ -9,12 +9,29 @@ server.connection({
     port: 8000
 });
 
+server.register(require('inert'), function() {
 
-// Start the server
-server.start(function(err) {
+  // Add the route
+  server.route({
+      method: 'GET',
+      path:'/{path*}',
+      handler: {
+        directory: {
+          path: __dirname + '/../public',
+          listing: false,
+          index: true
+        }
+      }
 
-    if (err) {
-        throw err;
-    }
-    console.log('Server running at:', server.info.uri);
+  });
+
+  // Start the server
+  server.start(function(err) {
+
+      if (err) {
+          throw err;
+      }
+      console.log('Server running at:', server.info.uri);
+  });
+
 });
