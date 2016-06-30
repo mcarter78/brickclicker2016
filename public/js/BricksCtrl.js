@@ -1,5 +1,15 @@
-function BricksCtrl($scope, $firebaseArray) {
+function BricksCtrl($scope, $firebaseArray, $firebaseAuth) {
   var ref = new Firebase('https://intense-heat-346.firebaseio.com');
+  auth = $firebaseAuth(ref);
+  $scope.login = function() {
+    $scope.authData = null;
+    $scope.error = null;
+    auth.$authAnonymously().then(function(authData) {
+      $scope.authData = authData;
+    }).catch(function(error) {
+      $scope.error = error;
+    });
+  };
   $scope.firebaseData = $firebaseArray(ref);
   $scope.data = [];
   $scope.image = '../img/trump1.png';
@@ -32,5 +42,6 @@ function BricksCtrl($scope, $firebaseArray) {
       $scope.addBrick();
     });
   };
+  $scope.login();
   $scope.waitForBrick();
 }
