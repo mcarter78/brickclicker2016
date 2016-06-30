@@ -17,7 +17,11 @@ body, html {
   text-shadow: -2px 2px 2px #294b70;
 }
 
-#sub-title {
+#sub-title-mob {
+  display: none;
+}
+
+.sub-title {
   color: white;
   position: absolute;
   top: 100px;
@@ -209,4 +213,25 @@ body, html {
   bottom: -42px;
   position: absolute;
   height: 45px;
+}
+
+@media only screen
+and (max-width : 990px) {
+  #sub-title,
+  #wall,
+  .side,
+  #add-brick,
+  #click-count,
+  #global-count {
+    display: none;
+  }
+  #title,
+  #sub-title-mob {
+    display: inline-block;
+    position: initial;
+    float: left;
+    margin: 20px 20px;
+
+
+  }
 }
