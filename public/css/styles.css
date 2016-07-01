@@ -221,12 +221,12 @@ and (max-width : 990px) {
   #wall,
   .side,
   #add-brick,
-  #click-count,
-  #global-count {
+  #click-count {
     display: none;
   }
   #title,
-  #sub-title-mob {
+  #sub-title-mob,
+  #global-count {
     display: inline-block;
     position: initial;
     float: left;
